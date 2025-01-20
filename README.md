@@ -68,7 +68,7 @@ Após restaurar o banco de dados, foi estabelecida a conexão com o Power BI par
 
 Configuração da conexão:
 
-No Power BI, foi selecionada a opção "Obter Dados" > "PostgreSQL database".
+No Power BI, foi selecionada a opção "Obter Dados" > "ODBC".
 
 Inserido o endereço do servidor (localhost) e o nome do banco de dados (teste_vendas).
 
@@ -91,6 +91,8 @@ Lucro bruto
 Retorno percentual
 
 Variação mês a mês
+
+Criação da tabela calendario 
 
 5. Visualização de Dados no Power BI
 
