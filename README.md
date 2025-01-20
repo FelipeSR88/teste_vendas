@@ -144,7 +144,7 @@ Retorno %
 
 Potencial do produto de acordo com retorno (%) (classificações como Ouro, Prata, etc.)
 
-Destaque para o Produto 17, com retorno de 479%, e com baixo custo.
+Destaque para o Produto 17, com retorno de 479%.
 
 6. Executando o Projeto
 
