@@ -90,6 +90,8 @@ Lucro bruto
 
 Retorno percentual
 
+Variação mês a mês
+
 5. Visualização de Dados no Power BI
 
 Foi criado um dashboard no Power BI chamado Performance Vendas, contendo as seguintes visualizações e análises:
@@ -108,7 +110,8 @@ Gráficos:
 
 Faturamento x Variação por mês:
 
-Exibe o faturamento mensal e a variação percentual mês a mês.
+![image](https://github.com/user-attachments/assets/c8b7da11-c63b-4b70-931e-563574097299)
+
 
 Destaque para os valores e variações negativas em relação aos meses anteriores.
 
