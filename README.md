@@ -44,7 +44,7 @@ Identifica os produtos mais vendidos em termos de receita e quantidade.
 
 Ticket médio por cliente no último trimestre:
 
-Determina o valor médio gasto por cliente no período de 2023-01-01 a 2023-01-07.
+Determina o valor médio gasto por cliente no período de 2023-01-01 a 2023-05-26.
 
 Comparação de vendas entre lojas ou regiões:
 
@@ -142,9 +142,9 @@ Lucro Bruto
 
 Retorno %
 
-Potencial de acordo com retorno (classificações como Ouro, Prata, etc.)
+Potencial do produto de acordo com retorno (%) (classificações como Ouro, Prata, etc.)
 
-Destaque para o Produto 17, com retorno de 479%.
+Destaque para o Produto 17, com retorno de 479%, e com baixo custo.
 
 6. Executando o Projeto
 
@@ -158,4 +158,4 @@ No Power BI, atualize os dados e visualize os resultados no dashboard.
 
 7. Contato
 
-Caso precise de suporte ou tenha dúvidas, entre em contato com o desenvolvedor do projeto.
+Caso precise de suporte ou tenha dúvidas, entre em contato com o e-mail feliperocha159fgg@gmail.com
