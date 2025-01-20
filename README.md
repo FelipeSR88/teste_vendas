@@ -62,84 +62,100 @@ Cálculo de ticket médio.
 
 Comparações regionais.
 
-4. Conexão com o Power BI
+4. Conexão com Power BI
 
-Configuração da Conexão:
+Após restaurar o banco de dados, foi estabelecida a conexão com o Power BI para modelagem e visualização de dados. A conexão foi realizada utilizando o driver do PostgreSQL. Seguiram-se os seguintes passos:
 
-No Power BI, clique em Obter Dados > Banco de Dados PostgreSQL.
+Configuração da conexão:
 
-Insira as credenciais de conexão:
+No Power BI, foi selecionada a opção "Obter Dados" > "PostgreSQL database".
 
-Servidor: localhost (ou o IP do servidor remoto).
+Inserido o endereço do servidor (localhost) e o nome do banco de dados (teste_vendas).
 
-Porta: 5432.
+Credenciais de autenticação configuradas corretamente.
 
-Banco de Dados: teste_vendas.
+Configuração no Power Query:
 
-Autenticação: Informe o usuário e a senha do PostgreSQL.
+Tabelas foram carregadas para o modelo de dados.
 
-Confirme a conexão e importe as tabelas desejadas (dim_produto, dim_cliente, dim_loja e fato_venda).
+Relacionamentos entre as tabelas foram definidos com base nas chaves primárias e estrangeiras.
 
-Resolvendo Problemas Comuns:
+Criação de medidas DAX:
 
-Caso haja erros de conexão, verifique o arquivo pg_hba.conf e as configurações de firewall para garantir que a porta 5432 esteja aberta.
+Fórmulas foram desenvolvidas para cálculos específicos, como:
 
-5. Modelagem de Dados no Power Query
+Total de vendas
 
-No Power Query, as tabelas foram carregadas e as relações foram definidas:
+Lucro bruto
 
-fato_venda foi conectada às tabelas dimensionais (dim_produto, dim_cliente, dim_loja) por meio das chaves primárias e estrangeiras.
+Retorno percentual
 
-Criação de colunas calculadas:
+5. Visualização de Dados no Power BI
 
-Ano-Mês: Para agregar as vendas por mês.
+Foi criado um dashboard no Power BI chamado Performance Vendas, contendo as seguintes visualizações e análises:
 
-Receita Total: Multiplicando quantidade pelo preço unitário.
+Indicadores principais (Cards):
 
-Normalização e exclusão de dados duplicados ou irrelevantes.
+Custo Total: R$44.630,00
 
-6. Construção de Fórmulas em DAX
+Faturamento: R$75.832
 
-Métricas Criadas:
+Lucro Bruto: R$31.201,86
 
-Vendas Totais:
+Retorno %: 70%
 
-Vendas Totais = SUM(fato_venda[receita_total])
+Gráficos:
 
-Ticket Médio:
+Faturamento x Variação por mês:
 
-Ticket Médio = [Vendas Totais] / DISTINCTCOUNT(fato_venda[id_cliente])
+Exibe o faturamento mensal e a variação percentual mês a mês.
 
-Top 5 Produtos:
+Destaque para os valores e variações negativas em relação aos meses anteriores.
 
-Top 5 Produtos = TOPN(5, SUMMARIZE(dim_produto, dim_produto[nome_produto], "Receita", SUM(fato_venda[receita_total])), [Receita], DESC)
+Faturamento por estado:
 
-Medidas para Comparativos:
+Apresenta um mapa com círculos dimensionados e posicionados nas regiões correspondentes aos estados.
 
-Crescimento Percentual Mensal:
+Exemplo de destaque: faturamento em Belo Horizonte e São Paulo.
 
-Crescimento Mensal = DIVIDE([Vendas Totais] - CALCULATE([Vendas Totais], PREVIOUSMONTH(fato_venda[data_venda])), CALCULATE([Vendas Totais], PREVIOUSMONTH(fato_venda[data_venda])))
+Faturamento por segmento:
 
-7. Apresentação do Modelo no Power BI
+Gráfico de barras que mostra a receita por diferentes segmentos de mercado (Segmento 1, Segmento 2, etc.).
 
-Páginas do Relatório:
+Top 10 produtos:
 
-Resumo Geral:
+Lista os produtos com maior faturamento em um gráfico de barras horizontal.
 
-Gráficos de barras para vendas por mês.
+Produto 4 lidera com R$27.672, seguido pelo Produto 2 com R$21.795,64.
 
-Indicadores de ticket médio e receita total.
+Tabela de detalhes:
 
-Análise de Produtos:
+Colunas incluem:
 
-Tabela dinâmica mostrando o Top 5 produtos.
+Nome do produto
 
-Gráficos de pizza para distribuição de receita.
+Custo Total
 
-Comparativo Regional:
+Faturamento
 
-Gráfico de mapas mostrando vendas por região.
+Lucro Bruto
 
-Barras empilhadas comparando lojas.
+Retorno %
 
-Caso precise, envie as imagens dos gráficos para complementar o README!
+Potencial de acordo com retorno (classificações como Ouro, Prata, etc.)
+
+Destaque para o Produto 17, com retorno de 479%.
+
+6. Executando o Projeto
+
+Abra o pgAdmin e conecte-se ao banco teste_vendas.
+
+Copie e cole os scripts SQL no Query Tool.
+
+Execute as consultas para obter os resultados desejados.
+
+No Power BI, atualize os dados e visualize os resultados no dashboard.
+
+7. Contato
+
+Caso precise de suporte ou tenha dúvidas, entre em contato com o desenvolvedor do projeto.
