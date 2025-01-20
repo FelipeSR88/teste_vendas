@@ -117,7 +117,7 @@ Destaque para os valores e variações negativas em relação aos meses anterior
 
 Faturamento por estado:
 
-Apresenta um mapa com círculos dimensionados e posicionados nas regiões correspondentes aos estados.
+![image](https://github.com/user-attachments/assets/4aff961a-0c56-4ad9-88eb-076df9067dea)
 
 Exemplo de destaque: faturamento em Belo Horizonte e São Paulo.
 
@@ -125,9 +125,13 @@ Faturamento por segmento:
 
 Gráfico de barras que mostra a receita por diferentes segmentos de mercado (Segmento 1, Segmento 2, etc.).
 
+![image](https://github.com/user-attachments/assets/daa21806-da1b-4150-9b39-ef965f28f52e)
+
 Top 10 produtos:
 
 Lista os produtos com maior faturamento em um gráfico de barras horizontal.
+
+![image](https://github.com/user-attachments/assets/d5fdad39-0788-4e85-b86e-b075f18a5d13)
 
 Produto 4 lidera com R$27.672, seguido pelo Produto 2 com R$21.795,64.
 
@@ -148,6 +152,8 @@ Retorno %
 Potencial do produto de acordo com retorno (%) (classificações como Ouro, Prata, etc.)
 
 Destaque para o Produto 17, com retorno de 479%.
+
+![image](https://github.com/user-attachments/assets/fcd06e62-a88c-40b8-b5ad-37798e03230f)
 
 6. Executando o Projeto
 
